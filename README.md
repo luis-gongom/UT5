@@ -1,153 +1,70 @@
-UT5 · Seguimiento de clases
-Este repositorio contiene el material de seguimiento de la Unidad de Trabajo 5 (UT5). En él se recopilan los ejemplos de código, las prácticas resueltas y las actividades realizadas durante las clases.
+# UT5 · Seguimiento de clases
 
-Objetivos
-Mantener organizado el material trabajado en clase.
-Disponer de ejemplos y ejercicios para facilitar el estudio y el repaso.
-Aprender a utilizar Git y GitHub para gestionar proyectos.
-Mantener una copia personal del repositorio y trabajar con ella desde el aula o desde casa.
-Aprender a incorporar las actualizaciones publicadas por el profesor.
-Organización del repositorio
-El contenido se organiza en dos carpetas principales:
+Repositorio de la **Unidad de Trabajo 5 (UT5)** con material de clase, códigos de ejemplo, prácticas y actividades.
 
-Sesiones de clase: contiene una carpeta por cada sesión, con los ejemplos de código y las prácticas desarrolladas en el aula.
-Ejercicios: contiene una carpeta por cada ejercicio, práctica o actividad evaluable.
-Estructura del repositorio
+## 🎯 Objetivos
+* Organizar y centralizar el material de clase.
+* Facilitar el estudio mediante ejemplos y ejercicios.
+* Aprender el flujo de trabajo con **Git** y **GitHub** (forks, clonación, sincronización).
+
+## 📁 Organización
+* **Sesiones de clase:** Material y código desarrollado por sesiones.
+* **Ejercicios:** Prácticas y actividades evaluables.
+
+```text
 UT5/
 ├── Sesiones de clase/
-│   ├── Clase 1/
-│   ├── Clase 2/
-│   └── Clase 3/
 └── Ejercicios/
-    ├── Ejercicio 1/
-    ├── Ejercicio 2/
-    └── Actividad evaluable 1/
-Esta estructura irá creciendo a medida que avancemos en la unidad.
+```
 
-1. Crear tu copia personal del repositorio (fork)
-Para trabajar con el material desde tu propio ordenador, primero debes crear una copia del repositorio del profesor en tu cuenta de GitHub.
+---
 
-Repositorio original del profesor: https://github.com/luis-gongom/UT5
+## 1. Crear tu copia (Fork)
+1. Accede al repositorio original: [https://github.com/luis-gongom/UT5](https://github.com/luis-gongom/UT5)
+2. Inicia sesión en GitHub y haz clic en **Fork** (arriba a la derecha) para copiarlo a tu cuenta personal.
 
-Sigue estos pasos:
+---
 
-Accede al repositorio original del profesor.
-Inicia sesión en tu cuenta de GitHub. Si todavía no tienes una cuenta, tendrás que crearla.
-Pulsa el botón Fork, situado en la parte superior derecha de la página.
-Selecciona tu cuenta personal como destino y crea el fork.
-Al finalizar, tendrás una copia propia del repositorio en tu cuenta de GitHub.
+## 2. Descargar en tu ordenador
+1. Copia la URL HTTPS de tu fork (`https://github.com/TU-USUARIO/UT5.git`).
+2. Abre la terminal en Visual Studio Code y clona el repositorio:
+   ```bash
+   git clone https://github.com/TU-USUARIO/UT5.git
+   ```
+3. Entra a la carpeta y abre el proyecto:
+   ```bash
+   cd UT5
+   code .
+   ```
 
-Importante: tu fork es independiente del repositorio del profesor. Cuando se publiquen nuevos contenidos, tendrás que incorporarlos siguiendo las instrucciones de actualización de este documento.
+---
 
-2. Descargar el repositorio en tu ordenador
-Una vez creado el fork, debes descargarlo en tu equipo para trabajar con los archivos desde Visual Studio Code.
-
-Paso 1. Copiar la URL de tu repositorio
-Accede a tu fork personal en GitHub.
-Pulsa el botón Code.
-Selecciona la opción HTTPS y copia la URL de tu repositorio.
-La URL tendrá un formato similar a este:
-
-https://github.com/TU-USUARIO/UT5.git
-Sustituye TU-USUARIO por tu nombre de usuario de GitHub.
-
-Paso 2. Clonar el repositorio
-Abre Visual Studio Code y accede al menú Terminal → Nuevo terminal.
-
-Ejecuta el siguiente comando utilizando la URL de tu fork personal:
-
-git clone https://github.com/TU-USUARIO/UT5.git
-Este comando descargará el repositorio en tu ordenador.
-
-Paso 3. Abrir el proyecto
-Accede a la carpeta descargada:
-
-cd UT5
-A continuación, abre el proyecto en Visual Studio Code:
-
-code .
-Si el comando code . no está disponible, puedes abrir la carpeta UT5 desde el menú Archivo → Abrir carpeta.
-
-Ya puedes consultar, ejecutar y modificar los archivos del proyecto.
-
-3. Configurar el repositorio original del profesor
-Para recibir los nuevos contenidos que se publiquen durante las clases, debes configurar una conexión con el repositorio original del profesor.
-
-Esta configuración se realiza una sola vez en cada copia local del proyecto.
-
-Abre el terminal de Visual Studio Code, asegurándote de estar dentro de la carpeta UT5, y ejecuta:
-
+## 3. Configurar el repositorio del profesor (`upstream`)
+Vincula tu copia local con el repositorio original para recibir actualizaciones futuras:
+```bash
 git remote add upstream https://github.com/luis-gongom/UT5.git
-Con este comando se añade el repositorio original del profesor con el nombre upstream.
-
-Comprobar la configuración
-Ejecuta:
-
 git remote -v
-Deberías ver dos repositorios remotos:
+```
 
-origin: tu fork personal de GitHub.
-upstream: el repositorio original del profesor.
-Por ejemplo:
+---
 
-origin    https://github.com/TU-USUARIO/UT5.git (fetch)
-origin    https://github.com/TU-USUARIO/UT5.git (push)
-upstream  https://github.com/luis-gongom/UT5.git (fetch)
-upstream  https://github.com/luis-gongom/UT5.git (push)
-Las direcciones de origin serán diferentes para cada alumno, ya que apuntarán a su propio repositorio.
-
-5. Actualizar el material desde casa
-Cada vez que el profesor publique una nueva clase, un ejercicio o una actividad, tendrás que incorporar esos cambios a tu copia local.
-
-Este procedimiento permite actualizar el material sin tener que descargar de nuevo todo el repositorio.
-
-Paso 1. Comprobar el estado del repositorio
-Antes de actualizar, ejecuta:
-
+## 4. Actualizar el material
+Para incorporar nuevos contenidos publicados por el profesor:
+```bash
 git status
-Si has modificado archivos, guarda tu trabajo mediante un commit antes de continuar:
-
-git add .
-git commit -m "Guarda el trabajo realizado"
-Si no tienes cambios pendientes, puedes continuar directamente.
-
-Paso 2. Descargar las novedades del profesor
-Ejecuta:
-
-git fetch upstream
-Este comando consulta el repositorio original y descarga la información de los cambios publicados, pero no modifica directamente los archivos de tu carpeta de trabajo.
-
-Paso 3. Incorporar las novedades
-Si la rama principal se llama main, ejecuta:
-
-git switch main
-git merge upstream/main
-El primer comando cambia a la rama principal de tu repositorio local. El segundo incorpora las novedades publicadas por el profesor.
-
-Si Git indica que hay conflictos, tendrás que revisar los archivos afectados y resolverlos antes de continuar.
-
-Paso 4. Subir la actualización a tu fork personal
-Una vez incorporados los cambios, ejecuta:
-
-git push origin main
-De esta forma, tu repositorio personal de GitHub también tendrá los nuevos contenidos.
-
-Resumen de los comandos de actualización
-Cuando quieras incorporar las novedades del profesor, el procedimiento habitual será:
-
-git status
+git add . && git commit -m "Guardar cambios locales" # (Opcional si tienes cambios propios)
 git fetch upstream
 git switch main
 git merge upstream/main
 git push origin main
-Recuerda: si tienes cambios propios sin guardar, debes guardarlos antes de actualizar. Si Git detecta conflictos, resuélvelos antes de ejecutar el último comando.
+```
 
-5. Trabajar desde diferentes equipos
-Si trabajas tanto en el aula como en casa, recuerda que los archivos de tu ordenador no se sincronizan automáticamente con GitHub.
+---
 
-Al terminar de trabajar en un equipo
-Guarda tus cambios y súbelos a tu fork:
-
+## 5. Trabajar en varios equipos
+Al terminar de trabajar en un equipo, sube siempre tus progresos a GitHub:
+```bash
 git add .
 git commit -m "Describe los cambios realizados"
 git push origin main
+```
